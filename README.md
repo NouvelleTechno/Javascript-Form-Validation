@@ -102,9 +102,15 @@ During instantiation, provide, if you like, optional parameters to define what y
 
 Parameters are as follows:
 
--  Min (integer): You require a minimum value - default: 0
+| Param | Type                 | Description                 | Default |
+| ----- | -------------------- | --------------------------- | ------- |
+| Min   | <code>integer</code> | You require a minimum value | 0       |
+| Max   | <code>integer</code> | You require a maximum value | 0       |
 
--  Max (integer): You require a maximum value - default: 0
+##### isValid(value) ⇒ <code>object|boolean</code>
+| Param  | Type                 | Description       |
+| ------ | -------------------- | ----------------- |
+| value  | <code>integer</code> | Number to check   |
 
 ```javascript
 // Instantiation
@@ -126,9 +132,15 @@ During instantiation, provide, if you like, optional parameters to define what y
 
 Parameters are as follows:
 
--  Min length (integer): You require a minimum length - default: 0
+| Param | Type                 | Description                  | Default |
+| ----- | -------------------- | ---------------------------- | ------- |
+| Min   | <code>integer</code> | You require a minimum length | 0       |
+| Max   | <code>integer</code> | You require a maximum length | 0       |
 
--  Max length (integer): You require a maximum length - default: 0
+##### isValid(text) ⇒ <code>object|boolean</code>
+| Param | Type                | Description   |
+| ----- | ------------------- | ------------- |
+| text  | <code>string</code> | Text to check |
 
 ```javascript
 // Instantiation
