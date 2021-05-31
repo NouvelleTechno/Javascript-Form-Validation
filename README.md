@@ -8,11 +8,9 @@ Javascript Library providing form validation helpers
 -  [Installation](#installation)
 
 -  [Usage](#usage)
-
   *  [Include Library](#include-library)
 
   *  [Use components](#use-components)
-
     +  [Email](#email)
 
     +  [Password](#password)
