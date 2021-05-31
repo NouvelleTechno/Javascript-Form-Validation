@@ -7,12 +7,12 @@ Javascript Library providing form validation helpers
 ## Table of contents
 - [Installation](#installation)
 - [Usage](#usage)
-  * [Include Library](#include-library)
-  * [Use components](#use-components)
-    + [Email](#email)
-    + [Password](#password)
-    + [Range](#range)
-    + [Text](#text)
+  - [Include Library](#include-library)
+  - [Use components](#use-components)
+    - [Email](#email)
+    - [Password](#password)
+    - [Range](#range)
+    - [Text](#text)
 ## Installation
 In order to use this library, [download zip file](https://github.com/NouvelleTechno/Javascript-Form-Validation/releases) and copy necessary files from `dist` folder into your assets folder.
 
