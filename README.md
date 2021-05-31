@@ -48,6 +48,11 @@ The Email component helps you validate the input contains a string that **looks 
 
 In order to use this component, first instantiate it and then use the `isValid` method to check it.
 
+##### isValid(email) ⇒ <code>boolean</code>
+| Param  | Type                | Description    |
+| ------ | ------------------- | -------------- |
+| email  | <code>string</code> | Email to check |
+
 ```javascript
 // Instantiation
 let email = new Email(); // replace email by variable name of your preference
@@ -57,21 +62,25 @@ email.isValid("email@example.com");
 ```
 #### Password
 The Password component helps you validate the input contains a string that matches the strength level you look for.
+
 In order to use this component, first instantiate it and then use the `isValid` method to check it.
 
 During instantiation, provide, if you like, optional parameters to define what you require in the password. 
 
 Parameters are as follows:
 
--  Uppercase (boolean): You require at least 1 uppercase character - default: true
+| Param       | Type                 | Description                                | Default |
+| ----------- | -------------------- | ------------------------------------------ | ------- |
+| Uppercase   | <code>boolean</code> | You require at least 1 uppercase character | true    |
+| Lowercase   | <code>boolean</code> | You require at least 1 lowercase character | true    |
+| Numeric     | <code>boolean</code> | You require at least 1 numeric character   | true    |
+| Special     | <code>boolean</code> | You require at least 1 special character   | true    |
+| Min length  | <code>integer</code> | You require a minimum length for password  | 12      |
 
--  Lowercase (boolean): You require at least 1 lowercase character - default: true
-
--  Numeric (boolean): You require at least 1 numeric character - default: true
-
--  Special (boolean): You require at least 1 special character (!@#$%^&*) - default: true
-
--  Min length (integer): You require a minimum length for password - default: 12
+##### isValid(pass) ⇒ <code>object|boolean</code>
+| Param  | Type                | Description       |
+| ------ | ------------------- | ----------------- |
+| pass   | <code>string</code> | Password to check |
 
 ```javascript
 // Instantiation
