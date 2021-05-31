@@ -9,6 +9,7 @@ Javascript Library providing form validation helpers
 - [Usage](#usage)
   - [Include Library](#include-library)
   - [Use components](#use-components)
+    - [DateTime](#datetime)
     - [Email](#email)
     - [Password](#password)
     - [Range](#range)
@@ -26,8 +27,25 @@ To use the library, start by including the files you need into `head` section of
 ### Use components
 Each component is made to help you validate a single type of data in your project.
 
+#### DateTime
+The DateTime component helps you validate the input contains a valid DateTime (based on JS formats)
+
+In order to use this component, first instantiate it and then use the `isValid` method to check it.
+
+```javascript
+function isValid(string myDate):bool
+```
+
+```javascript
+// Instantiation
+let myDate = new DateTime(); // replace myDate by variable name of your preference
+
+// Check DateTime
+myDate.isValid("2021-05-31 02:30");
+```
 #### Email
 The Email component helps you validate the input contains a string that **looks like** an email. It doesn't validate the email exists.
+
 In order to use this component, first instantiate it and then use the `isValid` method to check it.
 
 ```javascript
