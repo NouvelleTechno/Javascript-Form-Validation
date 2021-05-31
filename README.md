@@ -31,10 +31,10 @@ Each component is made to help you validate a single type of data in your projec
 The DateTime component helps you validate the input contains a valid DateTime (based on JS formats)
 
 In order to use this component, first instantiate it and then use the `isValid` method to check it.
-
-```javascript
-function isValid(string myDate):bool
-```
+##### isValid(myDate) ⇒ <code>boolean</code>
+| Param  | Type                | Description   |
+| ------ | ------------------- | ------------- |
+| myDate | <code>string</code> | Date to check |
 
 ```javascript
 // Instantiation
