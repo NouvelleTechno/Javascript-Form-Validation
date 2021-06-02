@@ -65,17 +65,17 @@ The Password component helps you validate the input contains a string that match
 
 In order to use this component, first instantiate it and then use the `isValid` method to check it.
 
-During instantiation, provide, if you like, optional parameters to define what you require in the password. 
+During instantiation, provide, if you like, optional parameters **as an object** to define what you require in the password. 
 
 Parameters are as follows:
 
 | Param       | Type                 | Description                                | Default |
 | ----------- | -------------------- | ------------------------------------------ | ------- |
-| Uppercase   | <code>boolean</code> | You require at least 1 uppercase character | true    |
-| Lowercase   | <code>boolean</code> | You require at least 1 lowercase character | true    |
-| Numeric     | <code>boolean</code> | You require at least 1 numeric character   | true    |
-| Special     | <code>boolean</code> | You require at least 1 special character   | true    |
-| Min length  | <code>integer</code> | You require a minimum length for password  | 12      |
+| uppercase   | <code>boolean</code> | You require at least 1 uppercase character | true    |
+| lowercase   | <code>boolean</code> | You require at least 1 lowercase character | true    |
+| numeric     | <code>boolean</code> | You require at least 1 numeric character   | true    |
+| special     | <code>boolean</code> | You require at least 1 special character   | true    |
+| minLength   | <code>integer</code> | You require a minimum length for password  | 12      |
 
 ##### isValid(pass) ⇒ <code>object|boolean</code>
 | Param  | Type                | Description       |
@@ -85,7 +85,7 @@ Parameters are as follows:
 ```javascript
 // Instantiation
 // This example requires uppercase, special, numeric and at least 15 characters
-let pass = new Password(true, false, true, true, 15); // replace pass by variable name of your preference
+let pass = new Password({lowercase: false, minLength: 15}); // replace pass by variable name of your preference
 
 // This example requires uppercase, lowercase, special, numeric and at least 12 characters
 let pass = new Password(); // replace pass by variable name of your preference
