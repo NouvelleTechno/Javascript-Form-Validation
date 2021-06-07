@@ -184,7 +184,7 @@ siren.isValid("123 456 789");
 ```
 
 #### Siret
-The Siren component helps you validate the input contains a string that is a valid "SIRET" number (French companies identifier), not that it exists.
+The Siret component helps you validate the input contains a string that is a valid "SIRET" number (French companies identifier), not that it exists.
 
 In order to use this component, first instantiate it and then use the `isValid` method to check it.
 
