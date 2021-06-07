@@ -9,10 +9,14 @@ Javascript Library providing form validation helpers
 - [Usage](#usage)
   - [Include Library](#include-library)
   - [Use components](#use-components)
+    - [Color](#color)
     - [DateTime](#datetime)
     - [Email](#email)
+    - [Iban](#iban)
     - [Password](#password)
     - [Range](#range)
+    - [Siren](#siren)
+    - [Siret](#siret)
     - [Text](#text)
 ## Installation
 In order to use this library, [download zip file](https://github.com/NouvelleTechno/Javascript-Form-Validation/releases) and copy necessary files from `dist` folder into your assets folder.
@@ -27,6 +31,24 @@ To use the library, start by including the files you need into `head` section of
 ### Use components
 Each component is made to help you validate a single type of data in your project.
 
+#### Color
+The Color component helps you validate the input contains a valid CSS color code (Named, rgb, rgba or hex)
+
+In order to use this component, first instantiate it and then use the `isValid` method to check it.
+##### isValid(color) ⇒ <code>boolean</code>
+| Param  | Type                | Description    |
+| ------ | ------------------- | -------------- |
+| color  | <code>string</code> | Color to check |
+
+```javascript
+// Instantiation
+let myColor = new Color(); // replace myColor by variable name of your preference
+
+// Check Color
+myColor.isValid("purple");
+myColor.isValid("rgba(14, 85, 213, 0.4)");
+myColor.isValid("#34D10C");
+```
 #### DateTime
 The DateTime component helps you validate the input contains a valid DateTime (based on JS formats)
 
@@ -60,6 +82,25 @@ let email = new Email(); // replace email by variable name of your preference
 // Check email
 email.isValid("email@example.com");
 ```
+
+#### Iban
+The Iban (International Bank Account Number) component helps you validate the input contains a string that is a valid Iban (not that the account exists).
+
+In order to use this component, first instantiate it and then use the `isValid` method to check it.
+
+##### isValid(iban) ⇒ <code>boolean</code>
+| Param  | Type                | Description    |
+| ------ | ------------------- | -------------- |
+| iban   | <code>string</code> | Iban to check  |
+
+```javascript
+// Instantiation
+let iban = new Iban(); // replace iban by variable name of your preference
+
+// Check iban
+iban.isValid("FR1234567890123456789012345");
+```
+
 #### Password
 The Password component helps you validate the input contains a string that matches the strength level you look for.
 
@@ -123,6 +164,43 @@ let range = new Range(); // replace range by variable name of your preference
 // Check password
 range.isValid(12);
 ```
+
+#### Siren
+The Siren component helps you validate the input contains a string that is a valid "SIREN" number (French companies identifier), not that it exists.
+
+In order to use this component, first instantiate it and then use the `isValid` method to check it.
+
+##### isValid(siren) ⇒ <code>object|boolean</code>
+| Param | Type                | Description    |
+| ----- | ------------------- | -------------- |
+| siren | <code>string</code> | Siren to check |
+
+```javascript
+// Instantiation
+let siren = new Siren(); // replace siren by variable name of your preference
+
+// Check siren
+siren.isValid("123 456 789");
+```
+
+#### Siret
+The Siren component helps you validate the input contains a string that is a valid "SIRET" number (French companies identifier), not that it exists.
+
+In order to use this component, first instantiate it and then use the `isValid` method to check it.
+
+##### isValid(siren) ⇒ <code>object|boolean</code>
+| Param | Type                | Description    |
+| ----- | ------------------- | -------------- |
+| siret | <code>string</code> | Siret to check |
+
+```javascript
+// Instantiation
+let siret = new Siret(); // replace siret by variable name of your preference
+
+// Check siret
+siret.isValid("123 456 789 00001");
+```
+
 #### Text
 The Text component helps you validate the input contains a string that meets the length you provide.
 
@@ -147,6 +225,6 @@ Parameters are as follows:
 // This example requires a text length between 10 and 20
 let text = new Text(10, 20); // replace text by variable name of your preference
 
-// Check password
+// Check text
 text.isValid("Hello World!");
 ```
