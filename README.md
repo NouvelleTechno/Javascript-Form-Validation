@@ -238,7 +238,7 @@ The Siren component helps you validate the input contains a string that is a val
 
 In order to use this component, first instantiate it and then use the `isValid` method to check it.
 
-**isValid(siren) ⇒ <code>object|boolean</code>**
+**isValid(siren) ⇒ <code>boolean</code>**
 
 | Param | Type                | Description    |
 | ----- | ------------------- | -------------- |
@@ -257,7 +257,7 @@ The Siret component helps you validate the input contains a string that is a val
 
 In order to use this component, first instantiate it and then use the `isValid` method to check it.
 
-**isValid(siren) ⇒ <code>object|boolean</code>**
+**isValid(siren) ⇒ <code>boolean</code>**
 
 | Param | Type                | Description    |
 | ----- | ------------------- | -------------- |
