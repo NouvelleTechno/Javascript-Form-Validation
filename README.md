@@ -11,8 +11,11 @@ Javascript Library providing form validation helpers
   - [Use components](#use-components)
     - [Color](#color)
     - [DateTime](#datetime)
+    - [EAN13](#ean13)
     - [Email](#email)
     - [Iban](#iban)
+    - [ISBN](#isbn)
+    - [JWT](#jwt)
     - [Password](#password)
     - [Range](#range)
     - [Siren](#siren)
@@ -65,6 +68,24 @@ let myDate = new DateTime(); // replace myDate by variable name of your preferen
 // Check DateTime
 myDate.isValid("2021-05-31 02:30");
 ```
+#### EAN13
+The EAN13 component helps you validate the input contains a string that is a valid EAN13 number.
+
+In order to use this component, first instantiate it and then use the `isValid` method to check it.
+
+##### isValid(ean) ⇒ <code>boolean</code>
+| Param  | Type                | Description    |
+| ------ | ------------------- | -------------- |
+| ean    | <code>string</code> | EAN13 to check |
+
+```javascript
+// Instantiation
+let ean = new Ean13(); // replace ean by variable name of your preference
+
+// Check ean
+ean.isValid("7612345678900");
+```
+
 #### Email
 The Email component helps you validate the input contains a string that **looks like** an email. It doesn't validate the email exists.
 
@@ -99,6 +120,42 @@ let iban = new Iban(); // replace iban by variable name of your preference
 
 // Check iban
 iban.isValid("FR1234567890123456789012345");
+```
+
+#### ISBN
+The ISBN (International Standard Book Number) component helps you validate the input contains a string that is a valid ISBN (not that the number exists).
+
+In order to use this component, first instantiate it and then use the `isValid` method to check it.
+
+##### isValid(isbn) ⇒ <code>boolean</code>
+| Param  | Type                | Description    |
+| ------ | ------------------- | -------------- |
+| isbn   | <code>string</code> | Isbn to check  |
+
+```javascript
+// Instantiation
+let isbn = new Isbn(); // replace isbn by variable name of your preference
+
+// Check isbn
+isbn.isValid("978-2-02-130452-7");
+```
+
+#### JWT
+The JWT (JSON Web Token) component helps you validate the input contains a string that is a valid JWT (not that the token exists nor that the signature is correct). **This only validated the token only contains valid characters and is correctly formed.
+
+In order to use this component, first instantiate it and then use the `isValid` method to check it.
+
+##### isValid(token) ⇒ <code>boolean</code>
+| Param  | Type                | Description    |
+| ------ | ------------------- | -------------- |
+| token  | <code>string</code> | Token to check |
+
+```javascript
+// Instantiation
+let token = new Jwt(); // replace token by variable name of your preference
+
+// Check token
+token.isValid("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c");
 ```
 
 #### Password
