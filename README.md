@@ -38,7 +38,9 @@ Each component is made to help you validate a single type of data in your projec
 The Color component helps you validate the input contains a valid CSS color code (Named, rgb, rgba or hex)
 
 In order to use this component, first instantiate it and then use the `isValid` method to check it.
-##### isValid(color) ⇒ <code>boolean</code>
+
+**isValid(color) ⇒ <code>boolean</code>**
+
 | Param  | Type                | Description    |
 | ------ | ------------------- | -------------- |
 | color  | <code>string</code> | Color to check |
@@ -56,7 +58,9 @@ myColor.isValid("#34D10C");
 The DateTime component helps you validate the input contains a valid DateTime (based on JS formats)
 
 In order to use this component, first instantiate it and then use the `isValid` method to check it.
-##### isValid(myDate) ⇒ <code>boolean</code>
+
+**isValid(myDate) ⇒ <code>boolean</code>**
+
 | Param  | Type                | Description   |
 | ------ | ------------------- | ------------- |
 | myDate | <code>string</code> | Date to check |
@@ -73,7 +77,8 @@ The EAN13 component helps you validate the input contains a string that is a val
 
 In order to use this component, first instantiate it and then use the `isValid` method to check it.
 
-##### isValid(ean) ⇒ <code>boolean</code>
+**isValid(ean) ⇒ <code>boolean</code>**
+
 | Param  | Type                | Description    |
 | ------ | ------------------- | -------------- |
 | ean    | <code>string</code> | EAN13 to check |
@@ -91,7 +96,8 @@ The Email component helps you validate the input contains a string that **looks 
 
 In order to use this component, first instantiate it and then use the `isValid` method to check it.
 
-##### isValid(email) ⇒ <code>boolean</code>
+**isValid(email) ⇒ <code>boolean</code>**
+
 | Param  | Type                | Description    |
 | ------ | ------------------- | -------------- |
 | email  | <code>string</code> | Email to check |
@@ -109,7 +115,8 @@ The Iban (International Bank Account Number) component helps you validate the in
 
 In order to use this component, first instantiate it and then use the `isValid` method to check it.
 
-##### isValid(iban) ⇒ <code>boolean</code>
+**isValid(iban) ⇒ <code>boolean</code>**
+
 | Param  | Type                | Description    |
 | ------ | ------------------- | -------------- |
 | iban   | <code>string</code> | Iban to check  |
@@ -127,7 +134,8 @@ The ISBN (International Standard Book Number) component helps you validate the i
 
 In order to use this component, first instantiate it and then use the `isValid` method to check it.
 
-##### isValid(isbn) ⇒ <code>boolean</code>
+**isValid(isbn) ⇒ <code>boolean</code>**
+
 | Param  | Type                | Description    |
 | ------ | ------------------- | -------------- |
 | isbn   | <code>string</code> | Isbn to check  |
@@ -145,7 +153,8 @@ The JWT (JSON Web Token) component helps you validate the input contains a strin
 
 In order to use this component, first instantiate it and then use the `isValid` method to check it.
 
-##### isValid(token) ⇒ <code>boolean</code>
+**isValid(token) ⇒ <code>boolean</code>**
+
 | Param  | Type                | Description    |
 | ------ | ------------------- | -------------- |
 | token  | <code>string</code> | Token to check |
@@ -175,7 +184,8 @@ Parameters are as follows:
 | special     | <code>boolean</code> | You require at least 1 special character   | true    |
 | minLength   | <code>integer</code> | You require a minimum length for password  | 12      |
 
-##### isValid(pass) ⇒ <code>object|boolean</code>
+**isValid(pass) ⇒ <code>object|boolean</code>**
+
 | Param  | Type                | Description       |
 | ------ | ------------------- | ----------------- |
 | pass   | <code>string</code> | Password to check |
@@ -205,7 +215,8 @@ Parameters are as follows:
 | Min   | <code>integer</code> | You require a minimum value | 0       |
 | Max   | <code>integer</code> | You require a maximum value | 0       |
 
-##### isValid(value) ⇒ <code>object|boolean</code>
+**isValid(value) ⇒ <code>object|boolean</code>**
+
 | Param  | Type                 | Description       |
 | ------ | -------------------- | ----------------- |
 | value  | <code>integer</code> | Number to check   |
@@ -227,7 +238,8 @@ The Siren component helps you validate the input contains a string that is a val
 
 In order to use this component, first instantiate it and then use the `isValid` method to check it.
 
-##### isValid(siren) ⇒ <code>object|boolean</code>
+**isValid(siren) ⇒ <code>object|boolean</code>**
+
 | Param | Type                | Description    |
 | ----- | ------------------- | -------------- |
 | siren | <code>string</code> | Siren to check |
@@ -245,7 +257,8 @@ The Siret component helps you validate the input contains a string that is a val
 
 In order to use this component, first instantiate it and then use the `isValid` method to check it.
 
-##### isValid(siren) ⇒ <code>object|boolean</code>
+**isValid(siren) ⇒ <code>object|boolean</code>**
+
 | Param | Type                | Description    |
 | ----- | ------------------- | -------------- |
 | siret | <code>string</code> | Siret to check |
@@ -272,7 +285,8 @@ Parameters are as follows:
 | Min   | <code>integer</code> | You require a minimum length | 0       |
 | Max   | <code>integer</code> | You require a maximum length | 0       |
 
-##### isValid(text) ⇒ <code>object|boolean</code>
+**isValid(text) ⇒ <code>object|boolean</code>**
+
 | Param | Type                | Description   |
 | ----- | ------------------- | ------------- |
 | text  | <code>string</code> | Text to check |
