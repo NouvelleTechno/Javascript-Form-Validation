@@ -22,15 +22,37 @@ Javascript Library providing form validation helpers
     - [Siret](#siret)
     - [Text](#text)
 ## Installation
+
+### VanillaJS
+
 In order to use this library, [download zip file](https://github.com/NouvelleTechno/Javascript-Form-Validation/releases) and copy necessary files from `dist` folder into your assets folder.
+
+### NPM
+Run 
+```bash
+npm install javascript-form-validation
+```
 
 ## Usage
 ### Include library
+#### VanillaJS
 To use the library, start by including the files you need into `head` section of your project.
 ```html
 <script src="your_directory/Email.min.js" defer></script>
 <script src="your_directory/Password.min.js" defer></script>
 ```
+
+#### NodeJS
+
+Import and instantiate the validator you want to use (example using Password)
+
+```js
+//
+const Validator = require("javascript-form-validation");
+
+let passValidator = new Validator.Password();
+```
+
 ### Use components
 Each component is made to help you validate a single type of data in your project.
 
