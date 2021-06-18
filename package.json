@@ -1,0 +1,28 @@
+{
+  "name": "javascript-form-validation",
+  "version": "1.1.0",
+  "description": "Javascript Library providing form validation helpers",
+  "main": "src/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NouvelleTechno/Javascript-Form-Validation.git"
+  },
+  "keywords": [
+    "javascript",
+    "form",
+    "validation",
+    "helpers"
+  ],
+  "author": "nouvelletechno",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NouvelleTechno/Javascript-Form-Validation/issues"
+  },
+  "homepage": "https://github.com/NouvelleTechno/Javascript-Form-Validation#readme"
+}
