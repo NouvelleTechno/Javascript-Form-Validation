@@ -1,6 +1,9 @@
 # Javascript-Form-Validation
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/c08895cbfc4d4f47857214781ad0010a)](https://app.codacy.com/gh/NouvelleTechno/Javascript-Form-Validation?utm_source=github.com&utm_medium=referral&utm_content=NouvelleTechno/Javascript-Form-Validation&utm_campaign=Badge_Grade_Settings)
+[![NPM](https://img.shields.io/npm/dt/javascript-form-validation)](https://www.npmjs.com/package/javascript-form-validation)
+[![Discord Server](https://img.shields.io/discord/642353810223923220)](https://discord.gg/azQ9sbD)
+
 
 Javascript Library providing form validation helpers
 
