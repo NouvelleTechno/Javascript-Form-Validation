@@ -3,4 +3,4 @@ module.exports = class DateTime {
         let d = new Date(value);
         return d instanceof Date && !isNaN(d.getTime());
     }
-}
+};

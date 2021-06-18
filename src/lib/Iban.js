@@ -31,4 +31,4 @@ module.exports = class Iban {
         }
         return checksum;
     }
-}
+};

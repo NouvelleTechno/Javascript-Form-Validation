@@ -57,4 +57,4 @@ module.exports = class Isbn {
     isOddNumber(value) {
         return value % 2 !== 0;
     }
-}
+};

@@ -29,4 +29,4 @@ module.exports = class Siren {
         }
         return true;
     }
-}
+};

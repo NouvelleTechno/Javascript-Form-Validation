@@ -6,4 +6,4 @@ module.exports = class Email {
         }
         return false;
     }
-}
+};

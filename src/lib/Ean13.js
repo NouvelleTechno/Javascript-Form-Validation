@@ -13,4 +13,4 @@ module.exports = class Ean13 {
         const base10Superior = Math.ceil(total / 10) * 10;
         return base10Superior - total === checkDigit;
     }
-}
+};

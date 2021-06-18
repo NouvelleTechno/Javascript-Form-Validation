@@ -4,4 +4,4 @@ module.exports = class Color {
         s.color = color;
         return s.color !== "";
     }
-}
+};

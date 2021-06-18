@@ -57,4 +57,4 @@ module.exports = class Password {
         }
         return (this.response && Object.keys(this.response).length === 0 && this.response.constructor === Object) ? true : this.response;
     }
-}
+};

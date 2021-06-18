@@ -29,4 +29,4 @@ module.exports = class Siret {
         }
         return true;
     }
-}
+};

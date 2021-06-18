@@ -20,4 +20,4 @@ module.exports = class Range {
         }
         return (this.response && Object.keys(this.response).length === 0 && this.response.constructor === Object) ? true : this.response;
     }
-}
+};
