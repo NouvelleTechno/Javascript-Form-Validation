@@ -47,9 +47,10 @@ To use the library, start by including the files you need into `head` section of
 Import and instantiate the validator you want to use (example using Password)
 
 ```js
-//
+// Import
 const Validator = require("javascript-form-validation");
 
+// Instanciation (don't use instanciations documented in "Use components" section below)
 let passValidator = new Validator.Password();
 ```
 
