@@ -5,7 +5,6 @@ module.exports = class Password {
         this.numeric = options.hasOwnProperty("numeric") ? options.numeric : true;
         this.special = options.hasOwnProperty("special") ? options.special : true;
         this.minLength = options.hasOwnProperty("minLength") ? options.minLength : 12;
-        this.response = {};
         try{
             if(typeof this.uppercase !== "boolean"){
                 throw "uppercase option should be boolean";
@@ -28,6 +27,7 @@ module.exports = class Password {
         }
     }
     isValid(password) {
+        this.response = {};
         if(this.uppercase){
             let regex = /^(?=.*[A-Z])/;
             if(!regex.test(password)){

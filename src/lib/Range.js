@@ -2,9 +2,9 @@ module.exports = class Range {
     constructor(min = 0, max = 0){
         this.min = min;
         this.max = max;
-        this.response = {};
     }
     isValid(value) {
+        this.response = {};
         if(isNaN(value)){
             return false;
         }

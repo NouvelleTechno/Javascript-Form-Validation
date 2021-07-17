@@ -2,9 +2,9 @@ module.exports = class Text {
     constructor(minLength = 0, maxLength = 0){
         this.minLength = minLength;
         this.maxLength = maxLength;
-        this.response = {};
     }
     isValid(text) {
+        this.response = {};
         if(this.minLength){
             if(text.length < this.minLength){
                 this.response.minLength = false;
