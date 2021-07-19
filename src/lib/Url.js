@@ -1,6 +1,5 @@
 module.exports = class Url {
     constructor(options = ["https", "http"]){
-        console.log(typeof options);
         this.protocols = (typeof options === "object") ? options : ["https", "http"];
     }
 
@@ -13,4 +12,4 @@ module.exports = class Url {
         }
         return this.protocols.includes(lien.protocol.slice(0,-1));
     }
-}
+};
