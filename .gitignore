@@ -1,4 +1,5 @@
 /node_modules/
+/.idea/
 .eslintrc.json
 index.html
 package-lock.json

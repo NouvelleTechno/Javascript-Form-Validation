@@ -24,6 +24,7 @@ Javascript Library providing form validation helpers
     - [Siren](#siren)
     - [Siret](#siret)
     - [Text](#text)
+    - [Url](#url)
 ## Installation
 
 ### VanillaJS
@@ -324,4 +325,31 @@ let text = new Text(10, 20); // replace text by variable name of your preference
 
 // Check text
 text.isValid("Hello World!");
+```
+#### Url
+The Url component helps you validate the input contains a string that meets the URL standard.
+
+In order to use this component, first instantiate it and then use the `isValid` method to check it.
+
+During instantiation, provide, if you like, optional parameter to define what you require as protocols. 
+
+Parameters are as follows:
+
+| Param       | Type               | Description                    | Default           |
+| ----------- | ------------------ | ------------------------------ | ----------------- |
+| Protocols   | <code>array</code> | You require specific protocols | ["https", "http"] |
+
+**isValid(url) ⇒ <code>boolean</code>**
+
+| Param | Type                | Description   |
+| ----- | ------------------- | ------------- |
+| url   | <code>string</code> | Url to check  |
+
+```javascript
+// Instantiation
+// This example requires "https" or "ftp" protocols
+let url = new Url(["https", "ftp"]); // replace url by variable name of your preference
+
+// Check url
+url.isValid("https://example.com");
 ```
