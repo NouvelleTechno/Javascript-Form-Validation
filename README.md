@@ -42,8 +42,8 @@ npm install javascript-form-validation
 #### VanillaJS
 To use the library, start by including the files you need into `head` section of your project.
 ```html
-<script src="your_directory/Email.min.js" defer></script>
-<script src="your_directory/Password.min.js" defer></script>
+<script src="your_directory/EmailField.min.js" defer></script>
+<script src="your_directory/PasswordField.min.js" defer></script>
 ```
 
 #### NodeJS
@@ -55,7 +55,7 @@ Import and instantiate the validator you want to use (example using Password)
 const Validator = require("javascript-form-validation");
 
 // Instanciation (don't use instanciations documented in "Use components" section below)
-let passValidator = new Validator.Password();
+let passValidator = new Validator.PasswordField();
 ```
 
 ### Use components
@@ -74,7 +74,7 @@ In order to use this component, first instantiate it and then use the `isValid` 
 
 ```javascript
 // Instantiation
-let myColor = new Color(); // replace myColor by variable name of your preference
+let myColor = new ColorField(); // replace myColor by variable name of your preference
 
 // Check Color
 myColor.isValid("purple");
@@ -94,7 +94,7 @@ In order to use this component, first instantiate it and then use the `isValid` 
 
 ```javascript
 // Instantiation
-let myDate = new DateTime(); // replace myDate by variable name of your preference
+let myDate = new DateTimeField(); // replace myDate by variable name of your preference
 
 // Check DateTime
 myDate.isValid("2021-05-31 02:30");
@@ -112,7 +112,7 @@ In order to use this component, first instantiate it and then use the `isValid` 
 
 ```javascript
 // Instantiation
-let ean = new Ean13(); // replace ean by variable name of your preference
+let ean = new Ean13Field(); // replace ean by variable name of your preference
 
 // Check ean
 ean.isValid("7612345678900");
@@ -131,7 +131,7 @@ In order to use this component, first instantiate it and then use the `isValid` 
 
 ```javascript
 // Instantiation
-let email = new Email(); // replace email by variable name of your preference
+let email = new EmailField(); // replace email by variable name of your preference
 
 // Check email
 email.isValid("email@example.com");
@@ -150,7 +150,7 @@ In order to use this component, first instantiate it and then use the `isValid` 
 
 ```javascript
 // Instantiation
-let iban = new Iban(); // replace iban by variable name of your preference
+let iban = new IbanField(); // replace iban by variable name of your preference
 
 // Check iban
 iban.isValid("FR1234567890123456789012345");
@@ -169,7 +169,7 @@ In order to use this component, first instantiate it and then use the `isValid` 
 
 ```javascript
 // Instantiation
-let isbn = new Isbn(); // replace isbn by variable name of your preference
+let isbn = new IsbnField(); // replace isbn by variable name of your preference
 
 // Check isbn
 isbn.isValid("978-2-02-130452-7");
@@ -188,7 +188,7 @@ In order to use this component, first instantiate it and then use the `isValid` 
 
 ```javascript
 // Instantiation
-let token = new Jwt(); // replace token by variable name of your preference
+let token = new JwtField(); // replace token by variable name of your preference
 
 // Check token
 token.isValid("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c");
@@ -220,10 +220,10 @@ Parameters are as follows:
 ```javascript
 // Instantiation
 // This example requires uppercase, special, numeric and at least 15 characters
-let pass = new Password({lowercase: false, minLength: 15}); // replace pass by variable name of your preference
+let pass = new PasswordField({lowercase: false, minLength: 15}); // replace pass by variable name of your preference
 
 // This example requires uppercase, lowercase, special, numeric and at least 12 characters
-let pass = new Password(); // replace pass by variable name of your preference
+let pass = new PasswordField(); // replace pass by variable name of your preference
 
 // Check password
 pass.isValid("here1sTheP@ssword!");
@@ -251,7 +251,7 @@ Parameters are as follows:
 ```javascript
 // Instantiation
 // This example requires a number between 10 and 20
-let range = new Range(10, 20); // replace range by variable name of your preference
+let range = new RangeField(10, 20); // replace range by variable name of your preference
 
 // This example has no limits (just checks entry is a number)
 let range = new Range(); // replace range by variable name of your preference
@@ -273,7 +273,7 @@ In order to use this component, first instantiate it and then use the `isValid` 
 
 ```javascript
 // Instantiation
-let siren = new Siren(); // replace siren by variable name of your preference
+let siren = new SirenField(); // replace siren by variable name of your preference
 
 // Check siren
 siren.isValid("123 456 789");
@@ -292,7 +292,7 @@ In order to use this component, first instantiate it and then use the `isValid` 
 
 ```javascript
 // Instantiation
-let siret = new Siret(); // replace siret by variable name of your preference
+let siret = new SiretField(); // replace siret by variable name of your preference
 
 // Check siret
 siret.isValid("123 456 789 00001");
@@ -321,7 +321,7 @@ Parameters are as follows:
 ```javascript
 // Instantiation
 // This example requires a text length between 10 and 20
-let text = new Text(10, 20); // replace text by variable name of your preference
+let text = new TextField(10, 20); // replace text by variable name of your preference
 
 // Check text
 text.isValid("Hello World!");
@@ -348,7 +348,7 @@ Parameters are as follows:
 ```javascript
 // Instantiation
 // This example requires "https" or "ftp" protocols
-let url = new Url(["https", "ftp"]); // replace url by variable name of your preference
+let url = new UrlField(["https", "ftp"]); // replace url by variable name of your preference
 
 // Check url
 url.isValid("https://example.com");
