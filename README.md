@@ -14,13 +14,17 @@ Javascript Library providing form validation helpers
   - [Use components](#use-components)
     - [Color](#color)
     - [DateTime](#datetime)
+    - [Digits](#digits)
     - [EAN13](#ean13)
     - [Email](#email)
     - [Iban](#iban)
+    - [IP](#ip)
     - [ISBN](#isbn)
     - [JWT](#jwt)
+    - [No Digits](#no-digits)
     - [Password](#password)
     - [Range](#range)
+    - [Same](#same)
     - [Siren](#siren)
     - [Siret](#siret)
     - [Text](#text)
@@ -99,6 +103,24 @@ let myDate = new DateTimeField(); // replace myDate by variable name of your pre
 // Check DateTime
 myDate.isValid("2021-05-31 02:30");
 ```
+#### Digits
+The Digits component helps you validate the input contains only digits (0-9)
+
+In order to use this component, first instantiate it and then use the `isValid` method to check it.
+
+**isValid(myText) ⇒ <code>boolean</code>**
+
+| Param  | Type                | Description   |
+| ------ | ------------------- | ------------- |
+| myText | <code>string</code> | Text to check |
+
+```javascript
+// Instantiation
+let myText = new DigitsField(); // replace myText by variable name of your preference
+
+// Check string
+myText.isValid("012345");
+```
 #### EAN13
 The EAN13 component helps you validate the input contains a string that is a valid EAN13 number.
 
@@ -156,6 +178,34 @@ let iban = new IbanField(); // replace iban by variable name of your preference
 iban.isValid("FR1234567890123456789012345");
 ```
 
+#### IP
+The IP component helps you validate the input contains a string that is a valid IP address (IPV4 and/or IPV6).
+
+In order to use this component, first instantiate it and then use the `isValid` method to check it.
+
+During instantiation, provide, if you like, optional parameters **as an object** to define what you require as IP version.
+
+Parameters are as follows:
+
+| Param  | Type                 | Description            | Default |
+| ------ | -------------------- | ---------------------- | ------- |
+| ipv4   | <code>boolean</code> | You check IPV4 version | true    |
+| ipv6   | <code>boolean</code> | You check IPV6 version | true    |
+
+**isValid(ip) ⇒ <code>boolean</code>**
+
+| Param  | Type                | Description    |
+| ------ | ------------------- | -------------- |
+| ip     | <code>string</code> | IP to check    |
+
+```javascript
+// Instantiation
+let ipAddress = new IPField({ipv4: false}); // replace iban by variable name of your preference. This will check only IPV6
+
+// Check ip
+ipAddress.isValid("fffe::1");
+```
+
 #### ISBN
 The ISBN (International Standard Book Number) component helps you validate the input contains a string that is a valid ISBN (not that the number exists).
 
@@ -192,6 +242,24 @@ let token = new JwtField(); // replace token by variable name of your preference
 
 // Check token
 token.isValid("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c");
+```
+#### No Digits
+The NoDigits component helps you validate the input doesn't contain digits (0-9)
+
+In order to use this component, first instantiate it and then use the `isValid` method to check it.
+
+**isValid(myText) ⇒ <code>boolean</code>**
+
+| Param  | Type                | Description   |
+| ------ | ------------------- | ------------- |
+| myText | <code>string</code> | Text to check |
+
+```javascript
+// Instantiation
+let myText = new NoDigitsField(); // replace myText by variable name of your preference
+
+// Check Text
+myText.isValid("Hello");
 ```
 
 #### Password
@@ -258,6 +326,24 @@ let range = new Range(); // replace range by variable name of your preference
 
 // Check password
 range.isValid(12);
+```
+#### Same
+The Same component helps you validate the input contains only identical values.
+
+In order to use this component, first instantiate it and then use the `isValid` method to check it.
+
+**isValid(value1, value2, value3, ...) ⇒ <code>boolean</code>**
+
+| Param  | Type                | Description     |
+| ------ | ------------------- | --------------- |
+| valueX | <code>any</code>    | Values to check |
+
+```javascript
+// Instantiation
+let myText = new SameField(); // replace myText by variable name of your preference
+
+// Check Values
+myText.isValid(12, "12", variable, "15"); // Example will return false
 ```
 
 #### Siren
